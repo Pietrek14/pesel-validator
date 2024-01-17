@@ -1,6 +1,20 @@
+# ******************************************************
+# nazwa funkcji:				sprawdz_plec
+# opis funkcji:					Sprawdza plec zakodowana w numerze PESEL
+# parametry:					pesel - numer PESEL
+# zwracany typ i opis:			str, wartość 'K' jezeli plec to kobieta, lub 'M' jesli to mezczyzna
+# autor:						12345678910
+# ******************************************************
 def sprawdz_plec(pesel: str) -> str:
 	return 'K' if int(pesel[-2]) in [0, 2, 4, 6, 8] else 'M'
 
+# ******************************************************
+# nazwa funkcji:				sprawdz_sume_kontrolna
+# opis funkcji:					Sprawdza, czy suma kontrolna jest zgodna w numerze PESEL
+# parametry:					pesel - numer PESEL
+# zwracany typ i opis:			bool, True jesli suma kontrolna jest zgodna, False w przeciwnym wypadku
+# autor:						12345678910
+# ******************************************************
 def sprawdz_sume_kontrolna(pesel: str) -> bool:
 	wagi = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
 	suma = 0
